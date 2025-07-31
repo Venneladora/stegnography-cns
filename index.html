@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Steganography - 7th Bit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="main-heading">Steganography</h1>
+
+  <div class="container">
+    <h1>Encrypt Message into Image</h1>
+    <input type="file" id="imageInput" accept="image/*"><br><br>
+    <textarea id="message" placeholder="Enter your message here..."></textarea><br>
+    <button onclick="embedMessage()">Encrypt & Download</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div id="status"></div>
+  </div>
+
+  <div class="container">
+    <h1>Decrypt Message from Image</h1>
+    <input type="file" id="decryptImage" accept="image/*"><br><br>
+    <button onclick="extractMessage()">Reveal Message</button>
+    <p id="decodedMessage"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
